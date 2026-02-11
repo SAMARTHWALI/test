@@ -1,0 +1,234 @@
+<section class="projects section">
+    <div class="container">
+        <h2 class="section-title fade-up">Selected Works</h2>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card fade-up" data-project="1">
+                <div class="project-img-wrapper">
+                    <img src="resources/images/project1.jpg" alt="Resort Booking Engine"
+                        onerror="this.src='https://via.placeholder.com/600x400?text=Booking+System'">
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Details</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Resort Booking Engine</h3>
+                    <div class="tech-stack">
+                        <span>ReactJS</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Razorpay</span>
+                    </div>
+                    <p><strong>Challenge:</strong> Managing double-bookings and manual payments.</p>
+                    <p><strong>Solution:</strong> Automated engine with real-time slot blocking.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card fade-up" data-project="2" style="transition-delay: 0.1s;">
+                <div class="project-img-wrapper">
+                    <img src="resources/images/project2.jpg" alt="E-Commerce Mobile App"
+                        onerror="this.src='https://via.placeholder.com/600x400?text=Mobile+App'">
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Details</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-Commerce Mobile App</h3>
+                    <div class="tech-stack">
+                        <span>React Native</span>
+                        <span>PHP API</span>
+                        <span>MySQL</span>
+                    </div>
+                    <p><strong>Challenge:</strong> Expanding local business to digital markets.</p>
+                    <p><strong>Solution:</strong> Cross-platform app with 200% reach improvement.</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card fade-up" data-project="3" style="transition-delay: 0.2s;">
+                <div class="project-img-wrapper">
+                    <img src="resources/images/project3.jpg" alt="Sales & Lead CRM"
+                        onerror="this.src='https://via.placeholder.com/600x400?text=CRM+Dashboard'">
+                    <div class="project-overlay">
+                        <span><i class="fas fa-eye"></i> View Details</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Sales & Lead CRM</h3>
+                    <div class="tech-stack">
+                        <span>PHP</span>
+                        <span>AJAX</span>
+                        <span>ChartJS</span>
+                    </div>
+                    <p><strong>Challenge:</strong> Sales team losing track of manual leads.</p>
+                    <p><strong>Solution:</strong> Centralized dashboard with auto-tracking.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modals -->
+    <div class="project-modal" id="modal-1">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeProjectModal(1)">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-header">
+                <img src="resources/images/project1.jpg" alt="Resort Booking Engine"
+                    onerror="this.src='https://via.placeholder.com/800x300?text=Booking+System'">
+            </div>
+            <div class="modal-body">
+                <h2>Resort Booking Engine</h2>
+                <div class="modal-tech">
+                    <span>ReactJS</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>Razorpay</span>
+                    <span>WhatsApp API</span>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>A comprehensive booking management system built for Krushika Farming Community's resort
+                        operations. The platform handles room reservations, day-out packages, and event bookings with
+                        real-time availability tracking.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Real-time room availability with conflict detection</li>
+                        <li>Secure payment integration via Razorpay</li>
+                        <li>Automated WhatsApp confirmations and reminders</li>
+                        <li>Admin dashboard for booking management</li>
+                        <li>Customer CRM with lead tracking</li>
+                        <li>Dynamic pricing based on seasons and packages</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technical Highlights</h3>
+                    <ul>
+                        <li>Built responsive frontend using ReactJS with modern UI/UX</li>
+                        <li>Designed RESTful API architecture in PHP</li>
+                        <li>Implemented database schema with optimized queries</li>
+                        <li>Integrated third-party APIs (Razorpay, WhatsApp Business)</li>
+                    </ul>
+                </div>
+
+                <div class="modal-links">
+                    <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-modal" id="modal-2">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeProjectModal(2)">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-header">
+                <img src="resources/images/project2.jpg" alt="E-Commerce Mobile App"
+                    onerror="this.src='https://via.placeholder.com/800x300?text=Mobile+App'">
+            </div>
+            <div class="modal-body">
+                <h2>E-Commerce Mobile App</h2>
+                <div class="modal-tech">
+                    <span>React Native</span>
+                    <span>PHP API</span>
+                    <span>MySQL</span>
+                    <span>Redux</span>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>A cross-platform mobile application developed for a traditional saree business to expand their
+                        reach to digital markets. The app provides seamless catalog browsing and order management for
+                        both iOS and Android users.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Product catalog with advanced filtering and search</li>
+                        <li>Shopping cart with real-time price calculations</li>
+                        <li>Order tracking and history</li>
+                        <li>Push notifications for offers and updates</li>
+                        <li>Wishlist and favorites functionality</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Impact</h3>
+                    <ul>
+                        <li>Increased customer reach by 200%</li>
+                        <li>Reduced order processing time by 60%</li>
+                        <li>Improved customer satisfaction with instant updates</li>
+                    </ul>
+                </div>
+
+                <div class="modal-links">
+                    <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-modal" id="modal-3">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeProjectModal(3)">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-header">
+                <img src="resources/images/project3.jpg" alt="Sales & Lead CRM"
+                    onerror="this.src='https://via.placeholder.com/800x300?text=CRM+Dashboard'">
+            </div>
+            <div class="modal-body">
+                <h2>Sales & Lead CRM</h2>
+                <div class="modal-tech">
+                    <span>PHP</span>
+                    <span>AJAX</span>
+                    <span>ChartJS</span>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>A custom-built CRM system designed to help sales teams track leads, manage customer
+                        relationships, and visualize performance metrics in real-time.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Lead capture and automatic status tracking</li>
+                        <li>Interactive dashboards with ChartJS visualizations</li>
+                        <li>Follow-up reminders and task management</li>
+                        <li>Performance analytics and reporting</li>
+                        <li>Team collaboration tools</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technical Highlights</h3>
+                    <ul>
+                        <li>AJAX-powered interface for seamless user experience</li>
+                        <li>Real-time data updates without page refresh</li>
+                        <li>Role-based access control for team members</li>
+                        <li>Automated email notifications for critical events</li>
+                    </ul>
+                </div>
+
+                <div class="modal-links">
+                    <a href="#"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
