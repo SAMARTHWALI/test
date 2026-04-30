@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krushika Gallery Design Template</title>
+    
+    <!-- Dependencies: Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Gallery Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1a2c21;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gallery Layout Demo</h1>
+
+        <div class="ig-masonry">
+            
+            <!-- --- POST TYPE 1: STATIC IMAGE --- -->
+            <div class="ig-card">
+                <div class="ig-media-container">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Beautiful Farm" loading="lazy">
+                </div>
+                <div class="ig-info">
+                    <div class="description-block">
+                        <p class="ig-caption">
+                            <span class="caption-short">A perfect morning at the Krushika community. Sustainable living meets natural beauty...</span>
+                            <span class="caption-full">A perfect morning at the Krushika community. Sustainable living meets natural beauty. This is where your investment grows along with the trees we plant. Join our community today and experience the peace of managed farmland.</span>
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                    <div class="ig-meta">
+                        <a href="#" target="_blank">View on Instagram</a>
+                        <i class="fab fa-instagram ig-flat-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --- POST TYPE 2: VIDEO --- -->
+            <div class="ig-card">
+                <div class="ig-media-container">
+                    <video class="ig-video" muted playsinline loop poster="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=800&q=80">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-agriculture-worker-spraying-growing-trees-in-the-field-34190-large.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="ig-info">
+                    <div class="description-block">
+                        <p class="ig-caption">
+                            <span class="caption-short">Behind the scenes: Our dedicated farm management team ensuring the health of...</span>
+                            <span class="caption-full">Behind the scenes: Our dedicated farm management team ensuring the health of our plantation. We take care of the hard work so you can enjoy the fruits of your investment. Professional management is the key to our high ROI.</span>
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                    <div class="ig-meta">
+                        <a href="#" target="_blank">Watch on Instagram</a>
+                        <i class="fab fa-instagram ig-flat-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --- POST TYPE 3: CAROUSEL ALBUM --- -->
+            <div class="ig-card">
+                <div class="ig-media-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80" alt="Slide 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c3c1b?auto=format&fit=crop&w=800&q=80" alt="Slide 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=800&q=80" alt="Slide 3">
+                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ig-info">
+                    <div class="description-block">
+                        <p class="ig-caption">
+                            <span class="caption-short">Capturing the various stages of our latest project development. Swipe to see...</span>
+                            <span class="caption-full">Capturing the various stages of our latest project development. Swipe to see the transformation from raw land to a lush, sustainable community. Every tree planted brings us closer to a greener future.</span>
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                    <div class="ig-meta">
+                        <a href="#" target="_blank">See all slides</a>
+                        <i class="fab fa-instagram ig-flat-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional dummy cards for masonry effect -->
+            <div class="ig-card">
+                <div class="ig-media-container">
+                    <img src="https://images.unsplash.com/photo-1595009552535-be753447727e?auto=format&fit=crop&w=800&q=80" alt="Farm House">
+                </div>
+                <div class="ig-info">
+                    <div class="description-block">
+                        <p class="ig-caption">Sustainable farmhouse designs at Krushika properties.</p>
+                    </div>
+                    <div class="ig-meta">
+                        <a href="#" target="_blank">Instagram</a>
+                        <i class="fab fa-instagram ig-flat-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ig-card">
+                <div class="ig-media-container">
+                    <img src="https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=800&q=80" alt="Lush Greenery">
+                </div>
+                <div class="ig-info">
+                    <div class="description-block">
+                        <p class="ig-caption">The beauty of nature, professionally managed.</p>
+                    </div>
+                    <div class="ig-meta">
+                        <a href="#" target="_blank">Instagram</a>
+                        <i class="fab fa-instagram ig-flat-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Gallery Script -->
+    <script src="script.js"></script>
+</body>
+</html>

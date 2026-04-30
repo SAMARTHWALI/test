@@ -23,18 +23,27 @@
 }
 
 /* --- Masonry Layout --- */
-.ig-grid, .ig-masonry {
-    column-count: 3;
+.ig-masonry {
+    column-count: 4;
     column-gap: var(--gallery-gap);
     margin-top: 30px;
     width: 100%;
 }
 
-.ig-card {
+.ig-masonry .ig-card {
     display: inline-block;
     width: 100%;
     margin-bottom: var(--gallery-gap);
     break-inside: avoid;
+}
+
+/* Responsive Masonry */
+@media (max-width: 1200px) { .ig-masonry { column-count: 3; } }
+@media (max-width: 992px) { .ig-masonry { column-count: 2; } }
+@media (max-width: 576px) { .ig-masonry { column-count: 1; } }
+
+/* --- Card Base Styles --- */
+.ig-card {
     background: var(--gallery-white);
     border-radius: var(--gallery-radius);
     overflow: hidden;
@@ -51,11 +60,6 @@
     transform: translateY(-8px);
     box-shadow: var(--gallery-shadow-hover);
 }
-
-/* Responsive Masonry */
-@media (max-width: 1200px) { .ig-grid, .ig-masonry { column-count: 3; } }
-@media (max-width: 992px) { .ig-grid, .ig-masonry { column-count: 2; } }
-@media (max-width: 576px) { .ig-grid, .ig-masonry { column-count: 1; } }
 
 /* --- Media Container --- */
 .ig-media-container {
@@ -96,7 +100,7 @@
 .play-overlay i {
     color: white;
     font-size: 20px;
-    margin-left: 3px; 
+    margin-left: 3px; /* Optical centering for play icon */
 }
 
 /* --- Content / Info Section --- */
