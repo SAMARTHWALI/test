@@ -1,42 +1,44 @@
 :root {
-    /* Colors - Dark Premium Theme */
-    --bg-gradient-start: #0f172a;
-    /* Slate 900 */
-    --bg-gradient-end: #1e293b;
-    /* Slate 800 */
-    --primary-bg: #0f172a;
-    --section-alt: #1e293b;
-    --card-bg: rgba(30, 41, 59, 0.7);
-    /* Dark Glass */
+    /* Colors - Hyper Modern Dark Theme */
+    --bg-gradient-start: #020617; /* Slate 950 */
+    --bg-gradient-end: #0f172a;   /* Slate 900 */
+    --primary-bg: #020617;
+    --section-alt: #0f172a;
+    
+    --card-bg: rgba(30, 41, 59, 0.4);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    
     --primary-text: #f8fafc;
-    /* Slate 50 */
-    --secondary-text: #cbd5e1;
-    /* Slate 300 */
+    --secondary-text: #94a3b8; /* Slate 400 */
+    
     --primary-accent: #38bdf8;
-    /* Sky 400 */
+    --secondary-accent: #818cf8;
     --accent-gradient: linear-gradient(135deg, #38bdf8, #818cf8);
-    /* Sky to Indigo */
+    --text-gradient: linear-gradient(to right, #f8fafc, #94a3b8);
+    
     --hover-accent: #0ea5e9;
-    /* Sky 500 */
-    --soft-glow: rgba(56, 189, 248, 0.15);
+    --soft-glow: rgba(56, 189, 248, 0.2);
     --border-color: rgba(255, 255, 255, 0.1);
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.5);
 
     /* Typography */
     --font-primary: 'Inter', sans-serif;
     --font-heading: 'EarthTone', serif;
-    --h1-size: 56px;
-    --h2-size: 38px;
-    --h3-size: 24px;
-    --body-size: 16px;
+    --h1-size: clamp(3rem, 8vw, 5rem); /* Fluid typography */
+    --h2-size: clamp(2rem, 5vw, 3rem);
+    --h3-size: 1.5rem;
+    --body-size: 1rem;
 
     /* Spacing & Layout */
     --container-width: 1200px;
     --header-height: 80px;
-    --section-spacing: 60px;
-    --border-radius: 12px;
-    --transition-speed: 0.3s;
+    --section-spacing: 80px;
+
+    --border-radius: 24px;
+    --transition-speed: 0.4s;
 }
+
 
 @font-face {
     font-family: 'EarthTone';
@@ -256,6 +258,68 @@ section {
     padding: var(--section-spacing) 0;
 }
 
+
 section:nth-child(even) {
     background-color: var(--section-alt);
 }
+
+/* Floating Contact Buttons */
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.call-btn {
+    background: rgba(56, 189, 248, 0.8); /* Primary Accent */
+}
+
+.whatsapp-btn {
+    background: rgba(34, 197, 94, 0.8); /* WhatsApp Green */
+}
+
+.floating-btn:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.call-btn:hover {
+    background: var(--primary-accent);
+}
+
+.whatsapp-btn:hover {
+    background: #22c55e;
+}
+
+@media (max-width: 768px) {
+    .floating-contact {
+        bottom: 20px;
+        right: 20px;
+        gap: 10px;
+    }
+    
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}

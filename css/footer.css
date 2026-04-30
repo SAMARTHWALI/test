@@ -1,24 +1,36 @@
 .footer {
     background-color: var(--primary-bg);
-    /* Dark background */
     color: var(--primary-text);
-    /* Light text */
-    padding: 60px 0 30px;
-    margin-top: 50px;
-    border-top: 1px solid var(--border-color);
+    padding: 80px 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--glass-border), transparent);
 }
 
 .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .footer-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: var(--font-heading);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer-bottom {
@@ -26,41 +38,45 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
+    padding-top: 40px;
+    border-top: 1px solid var(--glass-border);
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px;
 }
 
 .footer-bottom p {
     color: var(--secondary-text);
     margin-bottom: 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .footer-socials {
     display: flex;
-    gap: 20px;
+    gap: 16px;
 }
 
 .footer-socials a {
-    width: 35px;
-    height: 35px;
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--primary-accent);
-    transition: all var(--transition-speed) ease;
+    color: var(--primary-text);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
 }
 
 .footer-socials a:hover {
-    background: var(--primary-accent);
+    background: var(--accent-gradient);
     color: var(--primary-bg);
-    transform: translateY(-3px);
+    transform: translateY(-5px) scale(1.1);
+    border-color: transparent;
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
 }
+
 
 @media (max-width: 768px) {
     .footer-bottom {

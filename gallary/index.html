@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Samarth Wali</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f172a' width='100' height='100'/><text y='75' font-size='70' fill='%2338bdf8' font-family='Arial, sans-serif' font-weight='bold'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Using relative paths to parent directory -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="app">
+        <header id="navbar-container"></header>
+        
+        <main class="gallery-main">
+            <section class="gallery-hero">
+                <div class="container">
+                    <h1 class="fade-up">Instagram <span class="gradient-text">Gallery</span></h1>
+                    <p class="fade-up" style="animation-delay: 0.1s;">A glimpse into my latest projects, tech insights, and digital creative journey.</p>
+                </div>
+            </section>
+
+            <section class="gallery-grid-section">
+                <div class="container">
+                    <div id="instagram-feed" class="gallery-grid">
+                        <!-- Instagram posts will be injected here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer-container"></footer>
+    </div>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="tel:+916361950489" class="floating-btn call-btn" title="Call Me">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/916361950489" target="_blank" class="floating-btn whatsapp-btn" title="WhatsApp Me">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="gallery.js"></script>
+    <script>
+        // Adjust paths for modular injection if necessary
+        // In this case, we'll manually fetch header/footer to maintain consistency
+        async function loadSharedComponents() {
+            try {
+                const [navRes, footRes] = await Promise.all([
+                    fetch('../sections/navbar.html'),
+                    fetch('../sections/footer.html')
+                ]);
+                
+                const navHtml = await navRes.text();
+                const footHtml = await footRes.text();
+                
+                // Fix relative paths in navbar/footer for gallery page
+                const fixedNav = navHtml.replace(/href="#/g, 'href="../index.html#');
+                document.getElementById('navbar-container').innerHTML = fixedNav;
+                document.getElementById('footer-container').innerHTML = footHtml;
+                
+                // Initialize navbar logic
+                if (window.initNavbar) window.initNavbar();
+                
+                // Remove loader
+                document.getElementById('loader').classList.add('hidden');
+            } catch (error) {
+                console.error('Error loading components:', error);
+            }
+        }
+        
+        loadSharedComponents();
+    </script>
+</body>
+
+</html>
